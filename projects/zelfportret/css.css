@@ -1,0 +1,50 @@
+body {
+    background: #f3eeee;;
+}
+canvas {
+    width: 50vw;
+    height: 50vh;
+    margin-left: 20%;
+}
+#entirediv {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);  
+    width: 100%;
+}
+#backblue {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+}
+#image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+}
+#my_canvas {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+}
+#my_canvas2 {
+    position: absolute;
+    left: 30%;
+    margin-top: -5%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+}
+#frontys {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+}

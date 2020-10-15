@@ -1,0 +1,66 @@
+object {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+#RectanglePortrait {
+	float: left;
+	margin: 0 15%;
+	width: 70%;
+	height: 636px;
+	cursor: pointer;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#iframePortrait {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+#RectangleExo {
+	float: left;
+	width: 100%;
+	height: 636px;
+	cursor: pointer;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+#iframeExo {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+#RectangleHelper {
+	float: left;
+	width: 100%;
+	height: 936px;
+	cursor: pointer;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+#iframeHelper {
+    width: 100%;
+}
+
+#Rectanglecompare {
+	float: left;
+	width: 100%;
+	height: 936px;
+	cursor: pointer;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#iframecompare {
+    width: 100%;
+}

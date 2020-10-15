@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="" name="description">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<title>Hello world</title>
+	<link rel="shortcut icon" href="images/icons/favicon.ico" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<script>
+
+
+var memoryArr = ['Weasel','Rabbit','Weasel','Weasel','Weasel','Rabbit','Weasel','Weasel','Weasel','Weasel'];
+var memoryVal = [];
+var memoryTiles = [];
+var tilesTurned = 0;
+
+function newBoard(){
+	tilesTurned = 0;
+	var output = '';
+
+	for(var i = 0; i < memoryArr.length; i++){
+		output += '<div id="tile_'+i+'" onclick="memoryFlipTile(this,\''+memoryArr[i]+'\')"></div>';
+	}
+	document.getElementById('memory_board').innerHTML = output;
+}
+
+function memoryFlipTile(tile,val){
+	if(tile.innerHTML == "" && memoryVal.length < 2){
+		tile.style.background = '#FFF';
+		tile.innerHTML = val;
+		if(memoryVal.length == 0){
+			memoryVal.push(val);
+			memoryTiles.push(tile.id);
+		} else if(memoryVal.length == 1){
+			memoryVal.push(val);
+			memoryTiles.push(tile.id);
+			if(memoryVal[0] == 'Rabbit' && memoryVal[1] == 'Rabbit'){
+				tilesTurned += 2;
+
+   					var tile_1 = document.getElementById(memoryTiles[0]);
+				    var tile_2 = document.getElementById(memoryTiles[1]);
+
+					tile_1.style.backgroundColor = "gold";
+					tile_2.style.backgroundColor = "gold";
+
+			} else {
+				function flip2Back(){
+
+				    var tile_1 = document.getElementById(memoryTiles[0]);
+				    var tile_2 = document.getElementById(memoryTiles[1]);
+				    tile_1.style.background = '#FFAB1C';
+            	    tile_1.innerHTML = "";
+				    tile_2.style.background = '#FFAB1C';
+            	    tile_2.innerHTML = "";
+			
+				    memoryVal = [];
+            	    memoryTiles = [];
+				}
+				setTimeout(flip2Back, 1000);
+			}
+		}
+	}
+}
+</script>
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+		<main>
+
+<div id="memory_board"></div>
+<script>newBoard();</script>
+
+		</main>
+	</div>
+
+</body>
+
+</html>

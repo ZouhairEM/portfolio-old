@@ -1,0 +1,181 @@
+/********************************************************Carousel********************************************************/
+
+.slideshow-container {
+    padding-top: 3%;
+    max-width: 900px;
+    position: relative;
+    margin: auto;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-weight: bold;
+    width: auto;
+    padding: 30px;
+    margin-top: -22px;
+    color: white;
+    font-size: 18px;
+    transition: 0.6s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.caption {
+    color: black;
+    margin: 0 auto;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+}
+
+.fading {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .6;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .6;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.design {
+    display: block;
+    margin: auto;
+    height: 600px;
+    max-height: 500px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/********************************************************LIGHTBOX********************************************************/
+@media all {
+    .featherlight {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2147483647;
+        text-align: center;
+        white-space: nowrap;
+        cursor: pointer;
+        background: #333;
+        background: rgba(0, 0, 0, 0)
+    }
+    .featherlight:last-of-type {
+        background: rgba(0, 0, 0, .85)
+    }
+    .featherlight:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle
+    }
+    .featherlight .featherlight-content {
+        position: relative;
+        text-align: left;
+        vertical-align: middle;
+        display: inline-block;
+        overflow: auto;
+        margin-left: 5%;
+        margin-right: 5%;
+        max-height: 600px;
+        background: #fff;
+        cursor: auto;
+        white-space: normal
+    }
+    .featherlight .featherlight-inner {
+        display: block
+    }
+    .featherlight link.featherlight-inner,
+    .featherlight script.featherlight-inner,
+    .featherlight style.featherlight-inner {
+        display: none
+    }
+    .featherlight .featherlight-close-icon {
+        position: absolute;
+        z-index: 9999;
+        right: 0;
+        line-height: 25px;
+        width: 30px;
+        cursor: pointer;
+        text-align: center;
+        background: #fff;
+        background: rgba(0, 0, 0, 1);
+        color: #fff;
+        border: 0;
+        padding: 10;
+    }
+
+    .featherlight .featherlight-close-icon::-moz-focus-inner {
+        border: 0;
+        padding: 0
+    }
+    .featherlight .featherlight-image {
+        width: 100%
+    }
+
+    .featherlight-iframe .featherlight-content {
+        height: 100%;
+        width: 85%;
+    }
+    .featherlight iframe {
+        border: 20px;
+        height: 100%;
+        width: 100%;
+    }
+
+    .featherlight * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .featherlight .featherlight-content {
+        margin-left: 0;
+        margin-right: 0;
+        max-height: 98%;
+        padding: 10px 10px 0;
+        border-bottom: 10px solid transparent
+    }
+}

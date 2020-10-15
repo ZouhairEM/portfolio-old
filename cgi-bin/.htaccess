@@ -1,0 +1,16 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www.mariami.nl$ [NC]
+RewriteRule ^(.*)$ http://www.mariami.nl/$1 [L,R=301]
+
+RewriteCond %{HTTP_HOST} 185\.182\.56\.45
+RewriteRule (.*) http://www.mariami.nl/$1 [R=301,L]
+
+RewriteCond %{HTTP_USER_AGENT} libwww-perl.* 
+RewriteRule .* ? [F,L]
+
+Options -Indexes +ExecCGI
+AddHandler cgi-script .cgi .pl
+
+<filesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+Header set Expires "Thu, 15 Apr 2018 20:00:00 GMT"
+</filesMatch>

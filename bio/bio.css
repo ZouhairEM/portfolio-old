@@ -1,0 +1,294 @@
+/********************************************************BODY********************************************************/
+
+@font-face {
+    font-family: cabin;
+    src: url('../fonts/Cabin-Regular-TTF.ttf');
+}
+
+body {
+    background-color: white;
+    font-family: cabin;
+    max-width: 1500px;
+    overflow: hidden;
+    margin: 0 auto;
+    display: none;
+}
+
+
+/********************************************************NAVIGATION BAR********************************************************/
+
+.topnav {
+    background-color: white;
+    overflow: hidden;
+    width: 100%;
+    height: 12%;
+    font-size: 20px;
+}
+
+.topnav a {
+    display: inline-block;
+    float: left;
+    padding: 1%;
+    color: #000000;
+    text-decoration: none;
+    margin-top: 1%;
+    margin-left: 3%;
+    height: 55px;
+}
+
+.topnav a:hover {
+    border-bottom: 3px solid #000000;
+}
+
+#logo {
+    width: 100px;
+    margin-right: 30px;
+    float: right;
+    filter: blur(0.5px) grayscale(20%);
+}
+
+#setting img {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#football,
+#hat,
+#books,
+#poster,
+#laptop,
+#towel,
+#solarsystem,
+#headphones {
+    cursor: pointer;
+}
+
+
+/********************************************************OBJECTS********************************************************/
+
+#football {
+    width: 6%;
+    position: fixed;
+    left: 12%;
+    bottom: 10%;
+    top: 82%;
+}
+
+#hat {
+    position: fixed;
+    width: 12%;
+    left: 10%;
+    top: 30%;
+}
+
+#books {
+    position: fixed;
+    width: 11%;
+    left: 60%;
+    top: 70%;
+}
+
+#poster {
+    position: fixed;
+    width: 10%;
+    left: 23%;
+    top: 14%;
+    z-index: -1;
+}
+
+#laptop {
+    position: fixed;
+    width: 10%;
+    left: 28%;
+    top: 74%;
+}
+
+#towel {
+    position: fixed;
+    width: 13%;
+    left: 84%;
+    top: 46%;
+}
+
+#solarsystem {
+    position: fixed;
+    width: 25%;
+    left: 63%;
+    top: -1%;
+}
+
+#headphones {
+    position: fixed;
+    width: 7%;
+    left: 75%;
+    top: 80%;
+}
+
+#zouhair {
+    cursor: default;
+    width: 11%;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 10%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#room {
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    cursor: default;
+}
+
+#goback {
+    cursor: pointer;
+    visibility: hidden;
+    width: 9%;
+    opacity: 1;
+    position: fixed;
+    right: 10%;
+    left: 0;
+    bottom: 0%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+}
+
+#dialogset {
+    visibility: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    overflow-y: auto;
+}
+
+#dialog::-webkit-scrollbar {
+    width: 12px;
+    background-color: #ffffff;
+}
+
+#dialog::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border: 3px solid #ffffff;
+}
+
+#dialog {
+    font-family: cabin;
+    color: black;
+    padding: 2%;
+    width: 350px;
+    max-width: 350px;
+    max-height: 250px;
+    background-color: white;
+    opacity: 0.92;
+    border-style: solid;
+    border-width: 3px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    overflow: scroll;
+}
+
+#title {
+    background-color: black;
+    color: white;
+    padding: 4px;
+    font-size: 20px;
+    width: 350px;
+    text-align: center;
+}
+
+
+/********************************************************RESPONSIVE DESIGN********************************************************/
+
+@media screen and (max-height: 400px) {}
+
+@media screen and (max-width: 980px) {
+    #books {
+        top: 75%;
+    }
+    #hat {
+        top: 65%;
+    }
+    #towel {
+        top: 67%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .topnav {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .topnav {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        zoom: 60%;
+    }
+    .topnav {
+        zoom: 80%;
+    }
+    #logo {
+        width: 90px;
+        margin-right: 20px;
+    }
+    #dialogset {
+        width: 100%;
+        margin-top: 10%;
+        margin-left: -5%;
+        zoom: 130%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        zoom: 50%;
+    }
+    .topnav {
+        zoom: 75%;
+    }
+    #dialogset {
+        width: 100%;
+        margin-top: 20%;
+        margin-left: -10%;
+        zoom: 140%;
+    }
+    #logo {
+        width: 80px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .topnav {
+        zoom: 70%;
+    }
+    #dialogset {
+        margin-left: -35%;
+        zoom: 160%;
+    }
+    #logo {
+        width: 80px;
+        margin-right: 20px;
+    }
+}

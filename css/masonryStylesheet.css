@@ -1,0 +1,243 @@
+/***************************
+****************************
+Reset
+****************************
+***************************/
+@import 'normalize.min.css';
+@import "MyFontsWebfontsKit.css";
+
+/* Change all elements to use border-box */
+* {
+	box-sizing: border-box;
+}
+
+
+
+/***************************
+****************************
+Base Styles
+****************************
+***************************/
+html,body {
+	margin: 0px;
+	background: #f3eeee;
+}
+
+/* Font */
+h1 {
+  font-family: 'HalisGR-Medium', Helvetica, Arial, sans-serif;
+  letter-spacing: 2px;
+	text-transform: uppercase;
+	font-size: 3em;
+}
+h2 {
+  font-family: 'HalisGR-Medium', Helvetica, Arial, sans-serif;
+  letter-spacing: 2px;
+	text-transform: uppercase;
+	font-size: 2em;
+}
+a {
+  font-family: 'HalisGR-Medium', Helvetica, Arial, sans-serif;
+}
+p {
+  font-family: 'HalisGR-Book', Helvetica, Arial, sans-serif;
+}
+
+
+
+/***************************
+****************************
+NAVIGATION
+****************************
+***************************/
+header {
+	padding: 100px 0px;
+}
+header::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.logo {
+	float: left;
+	height: 50px;
+	fill: #141414;
+}
+
+nav {
+	float: right;
+}
+nav ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+nav li {
+	display: inline-block;
+	margin-left: 70px;
+	margin-top: 12px;
+}
+nav a {
+	color: #141414;
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+nav a:hover {
+	color: #982c55;
+	text-decoration: none;
+	transition: 0.5s ease;
+}
+#active {
+	color: #982c55;
+}
+
+
+
+/***************************
+****************************
+Footer
+****************************
+***************************/
+footer {
+	/* Grid margin fix/compensation */
+	/* padding: 70px 0px 100px 0px; */
+	/* Grid margin without grid gutters */
+	padding: 100px 0px;
+}
+footer::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.social {
+	float: left;
+}
+.social ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+.social li {
+	display: inline-block;
+	margin-right: 15px;
+}
+.copy {
+	float: right;
+	margin: 0px;
+}
+.social a {
+	color: #141414;
+	letter-spacing: 1px;
+}
+.social a:hover {
+	color: #982c55;
+	text-decoration: none;
+	transition: 0.5s ease;
+}
+
+
+
+/***************************
+****************************
+SELECTION COLOUR
+****************************
+***************************/
+/* Mozilla based browsers */
+::-moz-selection {
+       background-color: #982c55;
+       /*color: #141414;*/
+       color: white;
+}
+/* Works in Safari */
+::selection {
+       background-color: #982c55;
+       /*color: #141414;*/
+       color: white;
+       
+}
+
+
+
+/***************************
+****************************
+SQUARE GRID
+****************************
+***************************/
+.thumbnailOverlay {
+  position: relative;
+	/* margin-bottom: 30px; */
+}
+.thumbnailOverlay img {
+  display: block;
+	/* height: 338px; */
+}
+.thumbnailOverlay:hover .overlay {
+  opacity: 0.9;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #f3eeee;
+}
+.text {
+  color: #141414;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.col-lg-12 {
+	/* Grid fix */
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+
+
+/***************************
+****************************
+MASONRY GRID
+****************************
+***************************/
+/* clear fix */
+.grid {
+  max-width: 100%;
+}
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 32.719%;
+}
+
+.grid-item {
+  float: left;
+	margin-bottom: 10px;
+}
+
+.grid-item img {
+  display: block;
+  width: 100%;
+}

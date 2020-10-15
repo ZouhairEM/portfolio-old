@@ -1,0 +1,44 @@
+//declaraties juiste pinnen
+#define trigPin 3
+#define echoPin 2
+#define led 11
+#define led2 10
+
+void setup() {
+//seriele communicatie
+  Serial.begin (9600);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(led, OUTPUT);
+  pinMode(led2, OUTPUT);
+}
+
+void loop() {
+  long duration, distance;
+  digitalWrite(trigPin, LOW);  
+  delayMicroseconds(2); 
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  duration = pulseIn(echoPin, HIGH);
+  distance = (duration/2) / 29.1;
+//als getal lager is dan 46, led 11 lampje brandt uit, led 10 brandt aan
+  if (distance <= 45) {  
+    digitalWrite(led,HIGH); 
+  digitalWrite(led2,LOW);
+
+}
+  else {
+    digitalWrite(led,LOW);
+    digitalWrite(led2,HIGH);
+  }
+//moet alleen in getallen gestuurd zonder tekst worden zodat de waarden gelijk kunnen worden geparsed als integers in java
+  if (distance >= 400){
+    Serial.println("400");
+  }
+  else {
+    Serial.print(distance);
+    Serial.println(" ");
+  }//om elke 0,5 seconde geeft die waarden weer
+  delay(500);
+}

@@ -1,0 +1,417 @@
+/***************************
+****************************
+Reset
+****************************
+***************************/
+
+/* Change all elements to use border-box */
+* {
+	box-sizing: border-box;
+}
+
+main{
+	float: left;
+	width: 100%;
+}
+
+.intro{
+	float: left;
+	width: 100%;
+	margin-bottom: 15%;
+}
+
+.introText{
+    float: left;
+    width: 65%;
+    margin-right: 5%;
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.intro > img{
+    float: left;
+    width: 30%;
+    /* opacity: 0.5; */
+}
+
+.zouhair{
+    color: #982c55;
+    font-size: 40px;
+    font-weight: 500;
+    /* text-transform: capitalize; */
+}
+
+/********************************************** LINEBREAK **********************************************/
+.lineDiv{
+	float: left;
+	width:100%;
+	/* background: #333333; */
+	margin: 5% 0;
+}
+.lineBreaker{
+    position: relative;
+    text-align: center;
+    color: #982c55;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.lineBreaker:before, .lineBreaker:after{
+    position: absolute;
+    top: 47.5%;
+    height: 2.5px;
+    content: '\a0';
+    background-color: #a34468;
+}
+.lineBreaker:before{
+    width: 46%;
+    left: 0;
+    position: absolute;
+}
+.lineBreaker:after {
+    width: 46%;
+    right: 0;
+    position: absolute;
+}
+
+
+/***************************
+****************************
+Base Styles
+****************************
+***************************/
+html,body {
+	margin: 0px;
+	background: #f3eeee;
+}
+
+/* Font */
+ @font-face {
+     font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: 2px;
+	text-transform: uppercase;
+	font-size: 3em;
+
+}
+h2 {
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: 2px;
+	text-transform: uppercase;
+	font-size: 2em;
+}
+a {
+  font-family: 'Nunito', sans-serif;
+}
+p {
+  /*font-family: 'HalisGR-Book', Helvetica, Arial, sans-serif;*/
+}
+
+/* link */
+.link a{
+	color: #191919;
+}
+.link a:hover {
+	color: #982c55;
+	text-decoration: none;
+	transition: 0.5s ease;
+}
+
+
+
+/***************************
+****************************
+SLIDER
+****************************
+***************************/
+.slider {
+	margin-bottom: 10px;
+}
+
+
+
+/***************************
+****************************
+NAVIGATION
+****************************
+***************************/
+header {
+	padding: 70px 0px;
+}
+header::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.logo {
+	float: left;
+	height: 50px;
+	fill: #141414;
+}
+
+nav {
+	float: right;
+}
+nav ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+nav li {
+	display: inline-block;
+	margin-left: 70px;
+	margin-top: 12px;
+}
+nav a {
+	color: #141414;
+	text-transform: uppercase;
+	/*font-size: 14px;*/
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+nav a:hover {
+	color: #982c55;
+	text-decoration: none;
+	transition: 0.5s ease;
+}
+#active {
+	color: #982c55;
+}
+
+
+/***************************
+****************************
+Footer
+****************************
+***************************/
+footer {
+	/* Grid margin fix/compensation */
+	/* padding: 70px 0px 100px 0px; */
+	/* Grid margin without grid gutters */
+	padding: 100px 0px;
+}
+footer::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.social {
+	float: left;
+	width: 100%;
+	margin-top: 10%;
+}
+.social ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	font-weight: bold;
+	/* font-size: 16px; */
+	text-transform: uppercase;
+}
+.social li {
+	display: inline-block;
+	margin-right: 15px;
+}
+.copy {
+	float: right;
+	margin: 0px;
+	text-transform: capitalize;
+}
+.social a {
+	color: #141414;
+	letter-spacing: 1px;
+}
+.social a:hover {
+	color: #982c55;
+	text-decoration: none;
+	transition: 0.5s ease;
+}
+
+/* Footer Filler */
+/* Not for masonry grid */
+/* .footerFiller {
+	height: 10px;
+} */
+
+a {
+    color: #982c55;
+}
+
+
+
+/***************************
+****************************
+SELECTION COLOUR
+****************************
+***************************/
+/* Mozilla based browsers */
+::-moz-selection {
+       background-color: #982c55;
+       /*color: #141414;*/
+       color: white;
+}
+/* Works in Safari */
+::selection {
+       background-color: #982c55;
+       /*color: #141414;*/
+       color: white;
+}
+
+
+
+/***************************
+****************************
+SQUARE GRID
+****************************
+***************************/
+.thumbnailOverlay {
+  position: relative;
+	/* margin-bottom: 30px; */
+}
+.thumbnailOverlay img {
+  display: block;
+	/* height: 338px; */
+}
+.thumbnailOverlay:hover .overlay {
+  opacity: 0.9;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #f3eeee;
+}
+.text {
+  color: #141414;
+  font-size: 16px;
+  position: absolute;
+  color: #982c55;
+  font-weight: bold;
+  /* text-transform: uppercase; */
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.col-lg-12 {
+	/* Grid fix */
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+
+
+/***************************
+****************************
+MASONRY GRID
+****************************
+***************************/
+/* clear fix */
+.grid {
+  max-width: 100%;
+  float: left;
+  width: 100%;
+}
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 32.719%;
+}
+
+.grid-item {
+  float: left;
+	margin-bottom: 10px;
+}
+
+.grid-item img {
+  display: block;
+  width: 100%;
+}
+
+
+
+/***************************
+****************************
+Cover
+****************************
+***************************/
+.pageCover {
+		background-color: #262626;
+		width: 100%;
+		padding-top: 56.25%; /* 16:9 Aspect Ratio */
+		background-size: cover;
+		background-repeat:no-repeat;
+		background-position: center center;
+}
+
+/***************************
+****************************
+Content
+****************************
+***************************/
+.imgCol img {
+	width: 100%;
+}
+.textCol {
+	padding: 10px;
+}
+
+.contentCover img {
+	width: 100%;
+}
+
+.contentSlider {
+	margin-bottom: 0px;
+}
+
+.contentRow {
+	margin-top: 30px;
+}
+
+/* Video */
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+	/* margin-bottom: 30px; */
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/*div {
+    height: 99%;
+}*/
+
+object {
+    width: 100%;
+    min-height: 100%;
+}       
+

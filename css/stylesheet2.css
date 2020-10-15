@@ -1,0 +1,654 @@
+
+/***************************
+****************************
+Reset
+****************************
+***************************/
+@import 'normalize.min.css';
+@import "MyFontsWebfontsKit.css";
+
+
+/* Change all elements to use border-box */
+* {
+	box-sizing: border-box;
+}
+
+
+/***************************
+****************************
+Base Styles
+****************************
+***************************/
+html,body {
+	height: 100%;
+	margin: 0px;
+
+	font-family: 'HalisGR-Light', Helvetica, Arial, sans-serif;
+	color: #171717;
+}
+
+h1 {
+  font-family: 'HalisGR-Medium', Helvetica, Arial, sans-serif;
+  letter-spacing: 4px;
+	text-transform: uppercase;
+	font-size: 3em;
+}
+h2 {
+	color: #171717;
+	text-transform: uppercase;
+}
+
+a {
+  font-family: 'HalisGR-Medium', Helvetica, Arial, sans-serif;
+}
+
+p {
+  font-family: 'HalisGR-Book', Helvetica, Arial, sans-serif;
+}
+
+
+/***************************
+****************************
+Layout Styles
+****************************
+***************************/
+/* Container */
+/* #content {
+	width: 100%;
+	min-height: 100%;
+	margin-bottom: -150px;
+}
+#content:after {
+	content: "";
+	display: block;
+	height: 150px;
+}
+.container {
+ 	padding-right: 15px;
+ 	padding-left: 15px;
+ 	margin-right: auto;
+	margin-left: auto;
+	max-width: 1170px;
+} */
+
+
+
+/***************************
+****************************
+Hashtags
+****************************
+***************************/
+.hashtags {
+	text-align: center;
+}
+.hashtags p {
+	font-family: 'HalisGR-Book', Helvetica, Arial, sans-serif;
+  letter-spacing: 2px;
+	font-size: 24px;
+}
+
+/***************************
+****************************
+Content
+****************************
+***************************/
+.page-navigation a {
+	color: #171717;
+	text-decoration: none;
+	transition: 0.5s;
+}
+.page-navigation a:hover {
+	color: #00FFCC;
+}
+
+.rubric {
+	margin-top: 120px;
+	margin-bottom: 120px;
+}
+.rubric-element {
+	margin-top: 60px;
+}
+
+.content-link {
+	color: #171717;
+	background-color: #00FFCC;
+	text-decoration: none;
+	transition: 0.5s;
+}
+.content-link:hover {
+	color: #00FFCC;
+	background: none;
+	text-decoration: none;;
+}
+
+.content h1 {
+	font-size: 3em;
+	color: #171717;
+}
+.content h2 {
+	font-family: 'HalisGR-Medium', Helvetica, Arial, sans-serif;
+	font-size: 1.8em;
+	color: #171717;
+}
+.content h3 {
+	font-size: 1.75em;
+	color: #171717;
+}
+.content p {
+	font-size: 1em;
+	color: #171717;
+}
+
+.content-img img {
+	margin-bottom: 30px;
+	width: 100%;
+}
+
+
+/***************************
+****************************
+NAVIGATION
+****************************
+***************************/
+/* new */
+.navigation {
+	margin-top: 30px;
+}
+.nav a {
+	font-family: 'HalisGR-Medium', Helvetica, Arial, sans-serif;
+  letter-spacing: 4px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 24px;
+	color: #171717;
+	transition: 0.5s;
+}
+.nav a:hover {
+	color: #00FFCC;
+}
+
+#active {
+	color: #00FFCC;
+}
+
+
+
+header::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+nav ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+.ulleft {
+	float: left;
+}
+.ulright {
+	float: right;
+}
+.lileft {
+	margin-right: 70px;
+}
+.liright {
+	margin-left: 70px;
+}
+nav li {
+	display: inline-block;
+	padding-top: 25px;
+	position: relative;
+}
+nav a {
+	color: #171717;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 25px;
+}
+nav a::before {
+	content: '';
+	display: block;
+	height: 5px;
+	width: 0%;
+	background-color: #171717;
+	position: absolute;
+	top: 0px;
+	transition: all ease-in-out 250ms;
+}
+nav a:hover::before {
+	width: 100%;
+}
+
+/* Logo */
+#headerlogo {
+	clear: both;
+	padding: 50px 0px;
+	height: 160px;
+	display: block;
+	margin: 0px auto;
+}
+/* logo svg */
+.logo {
+	width: 180px;
+}
+.wholekomodo {
+	fill: #171717;
+	transition: 0.5s;
+}
+.wholekomodo:hover {
+	fill: #00FFCC;
+}
+
+
+/* HOMEPAGE LOGO */
+.logo-section {
+	margin-top: 30px;
+	margin-bottom: 60px;
+}
+#logo {
+	width: 200px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1024px) {
+	.hamburger {
+		cursor: pointer;
+		padding: 15px 0px;
+		display: block;
+	}
+	.line {
+		border-bottom: 4px solid #171717;
+		width: 35px;
+		margin-bottom: 6px;
+	}
+	.line:last-child {
+		margin-bottom: 0px;
+	}
+
+	.ulleft, .ulright {
+		display: none;
+	}
+
+	/* Style */
+	nav li {
+		width: 100%;
+	}
+	.menu {
+        height: 0px;
+        overflow: hidden;
+        transition: height 0.3s;
+    }
+    .open {
+        height: 295px;
+    }
+
+	nav a::before {
+		top: 55px;
+	}
+}
+@media only screen and (min-width: 1025px) {
+	.menu {
+		display: none;
+	}
+}
+
+
+
+/***************************
+****************************
+Content
+****************************
+***************************/
+.fulltitle {
+	display: inline-block;
+	width: 100%;
+}
+
+/* Welcome Tekst */
+#hide h1 {
+	text-align: center;
+	font-size: 18pt;
+}
+@media only screen and (max-width: 500px){
+	#hide h1 {
+		font-size: 97%;
+	}
+}
+
+
+
+/***************************
+****************************
+SELECTION COLOUR
+****************************
+***************************/
+/* Mozilla based browsers */
+::-moz-selection {
+       background-color: #00FFCC;
+       color: #171717;
+}
+/* Works in Safari */
+::selection {
+       background-color: #00FFCC;
+       color: #171717;
+}
+
+
+
+/***************************
+****************************
+GRID
+****************************
+***************************/
+
+/* New */
+.thumbnail {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.text-bottom-center {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.thumbnail p {
+	font-size: 18px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+
+	padding: 0px 10px 0px 10px;
+	background: rgb(23,23,23, 0.8);
+}
+
+.thumbnail img {
+  -webkit-filter: brightness(.8);
+  filter: brightness(.8);
+  transition: 0.5s;
+}
+
+.thumbnail img:hover {
+  -webkit-filter: brightness(1);
+  filter: brightness(1);
+}
+
+
+.title {
+	transform: translate(0, -50%);
+    position: absolute;
+    top: 50%;
+		width: 100%;
+		text-align: center;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+}
+.grid {
+	margin-bottom: 30px;
+}
+.grid-bundle {
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+.gridmargin {
+	margin: 10px;
+}
+
+.gallery {
+	position: relative;
+}
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+.bottomleft {
+    position: absolute;
+    bottom: -6px;
+    left: 0px;
+}
+.bottomleft h2 span {
+	font: bold 24px/45px;
+	color: white;
+	letter-spacing: -1px;
+	background: rgb(0, 0, 0); /* fallback color */
+	background: rgba(0, 0, 0, 0.7);
+	padding: 10px;
+}
+
+
+
+.responsive {
+    padding: 15px 18px;
+    float: left;
+    width: 49.99999%;
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+	.bottomleft {
+		bottom: 2px;
+	}
+	h2 {
+		font-size: 90%;
+	}
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/***************************
+****************************
+Cover
+****************************
+***************************/
+.cover {
+  background-color: #262626;
+  width: 100%;
+  height: 352px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+	margin-bottom: 30px;
+}
+
+/* Themes */
+.cover-logo {
+  background-image: url('../images/content/personallogo/komodocover.jpg');
+}
+.cover-personal {
+	background-image: url('../images/content/s6/development/personal-development.jpeg');
+}
+.cover-sco {
+	background-image: url('../images/content/s6/sco/sco.jpg');
+}
+.cover-ux {
+	background-image: url('../images/content/s6/ux/ux.jpeg');
+}
+.cover-ded {
+	background-image: url('../images/content/s6/ded/ded.jpg');
+}
+
+
+/***************************
+****************************
+Footer
+****************************
+***************************/
+.footer {
+	margin-top: 60px;
+	margin-bottom: 30px;
+}
+#footer-text {
+	color: #171717;
+	font-size: 24px;
+}
+
+.social {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 30px;
+
+	height: 38px;
+	fill: #171717;
+	transition: 0.5s;
+}
+
+.social:hover {
+	fill: #00FFCC;
+}
+
+
+/***************************
+****************************
+About
+****************************
+***************************/
+.about-header {
+	margin-top: 30px;
+	text-align: center;
+}
+.about-header h1 {
+	font-size: 1.3em;
+}
+.about-content {
+	margin-top: 30px;
+}
+.about-content h2 {
+	font-family: 'HalisGR-Medium', Helvetica, Arial, sans-serif;
+  letter-spacing: 4px;
+	text-transform: uppercase;
+	font-size: 1.3em;
+}
+.about-content-last {
+	margin-bottom: 60px;
+}
+.avatar {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+
+/***************************
+****************************
+Rating
+****************************
+***************************/
+.fa-circle {
+	color: #171717;
+	margin-right: 5px;
+}
+.checked {
+	color: #00FFCC;
+}
+
+
+
+
+
+
+/* highlight */
+.highlight {
+	padding-top: 20px;
+	padding-bottom: 5px;
+	/* background-color: #171717; */
+}
+.highlight h2 {
+	font-family: 'HalisGR-Medium', Helvetica, Arial, sans-serif;
+	font-size: 1.8em;
+	/* color: #00FFCC; */
+	color: #171717;
+}
+.highlight p {
+	/* color: white; */
+	color: #171717;
+}
+
+
+
+/* prototype */
+.dark-box {
+	background-color: #171717;
+	text-align: center;
+	color: white;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+
+
+/* new gallery */
+.grid-gallery {
+	background-color: cyan;
+	padding: 0px;
+}
+.grid-gallery img {
+	width: 100%;
+	height: auto;;
+}
+.test1 {
+	background-color: cyan;
+}
+.test2 {
+	background-color: red;
+}
+.test3 {
+	background-color: yellow;
+}
+.test4 {
+	background-color: blue;
+}
+
+
+/***************************
+****************************
+New Content Layout
+****************************
+***************************/
+.cr {
+	margin: 120px 0px 15px;
+}
+.cr h1 {
+	margin: 0px;
+}
+.cr-title h2 {
+	font-family: 'HalisGR-Medium', Helvetica, Arial, sans-serif;
+	font-size: 1.8em;
+	color: #171717;
+}
+
+/* Project Cover */
+.cr-cover {
+	margin: 55px 0px 15px;
+}
+.cr-cover img {
+	width: 100%;
+}
+
+/* Content */
+.cr-content {
+	margin: 55px 0px 15px;
+}
+/* Content With Cover */
+.cr-content-c {
+	margin: 15px 0px 15px;
+}
+
+/* Content Grid */
+.cr-content-grid {
+
+}

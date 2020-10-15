@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Quiz
+    </title>
+    <link href="layout.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="logomedia.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,500,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <meta name="robots" content="noindex,follow" />
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-header fixed-brand">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" id="menu-toggle">
+                <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+            </button>
+            <a href="index.html"><img src="logomedia.png" alt="Icon" id="imgicon" height="30px" width="30px"></a>
+            <a class="navbar-brand" href="index.html">Een veel beter plan</a>
+        </div>
+    </nav>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+               
+            <div class="scrollbar">
+                <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+                    <li>
+                        <a href="intro.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-info-circle fa-stack-1x "></i></span>Intro</a>
+                    </li>
+                    <li>
+                        <a href="quiz.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-check-circle-o fa-stack-1x "></i></span>Quiz</a>
+                    </li>
+                    <li>
+                        <a href="milieubewust.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-bookmark-o fa-stack-1x "></i></span>Milieubewust</a>
+                    </li>
+                    <li>
+                        <a href="sceptisch.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-bookmark-o fa-stack-1x "></i></span>Sceptisch</a>
+                    </li>
+                    <li>
+                        <a href="onverschillig.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-bookmark-o fa-stack-1x "></i></span>Onverschillig</a>
+                    </li>
+                    <li>
+                        <a href="community.html" id="commknop"><span class="fa-stack fa-lg pull-left"><i class="fa fa-comments-o fa-stack-1x "></i></span>Community</a>
+                        <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                            <li><a href="debat.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-comment-o fa-stack-1x ""></i></span>Debat</a></li>
+                            <li><a href="discussie.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-comment-o fa-stack-1x ""></i></span>Discussie</a></li>
+                            <li><a href="groei.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-comment-o fa-stack-1x ""></i></span>Groei</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        </ul>
+                    </div>
+                   <div class="titelstijl">Quiz</div>                    
+                    <div id="menuutje">
+                        <div id="quiztekst" class="quiztext">
+                            <div id="container">
+                                <p>Je bent aangebroken op een belangrijk moment. Voordat je verder kan lezen wordt je gevraagd om aan deze quiz te beginnen.</p>
+                                <p>Dit is om te vernemen hoe jij tegen klimaatverandering aan kijkt. Het verhaal past zich voor je aan op jouw standpunt daarin.</p>
+                                Uit de quiz kan blijken dat je één van de drie onderstaande karakters hebt als het gaat over klimaatverandering:
+                                <p>Voor ieder karakter is er een aparte verhaallijn gemaakt die daarbij aansluit.</p>
+                                <button id="showquiz" class="btn">Show quiz</button>
+                                <div id="wrapperquiz" class="ending"></div>
+                                <div id="ending">
+                                    <button id="leesverder" class="btn" onclick="score()">Lees verder</button>
+                                </div>
+                            </div>
+                        </div>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+                        <script src="js/jquery-1.11.2.min.js"></script>
+                        <script src="js/bootstrap.min.js"></script>
+                        <script src="js/sidebar_menu.js"></script>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+            $("#leesverder").hide();
+            $("#wrapperquiz").hide();
+
+            $("#showquiz").click(function() {
+                $("#showquiz").hide();
+                $("#wrapperquiz").show();
+                $("#leesverder").show();
+                $("#wrapperquiz").html("<form class=\"answer\" id=\"question_one\">" +
+                    "Hoe belangrijk vind jij carpoolen?" +
+                    "<br/>" +
+                    "<input type=\"radio\" class=\"styled\" name=\"first_answer\" value=\"1\" /> Belangrijk." +
+                    "<br/>" +
+                    "<input type=\"radio\" class=\"styled\" name=\"first_answer\" value=\"2\" /> Geen mening." +
+                    "<br/>" +
+                    "<input type=\"radio\" class=\"styled\" name=\"first_answer\" value=\"3\" /> Niet belangrijk." +
+                    "<br/>" +
+                    "</form>" +
+                    "<br/>" +
+                    "<form class=\"answer\" id=\"question_two\">" +
+                    "Doe jij aan afval scheiden?" +
+                    "<br/>" +
+                    "<input type=\"radio\" class=\"styled\" name=\"second_answer\" value=\"1\" /> Ja." +
+                    "<br/>" +
+                    "<input type=\"radio\" class=\"styled\" name=\"second_answer\" value=\"2\" /> Niet actief." +
+                    "<br/>" +
+                    "<input type=\"radio\" class=\"styled\" name=\"second_answer\" value=\"3\" /> Nee." +
+                    "<br/>" +
+                    "</form>" +
+                    "<br/>" +
+                    "<form class=\"answer\" id=\"question_three\">" +
+                    "Wat doe je met oude lampjes/batterijen?" +
+                    "<br/>" +
+                    "<input type=\"radio\" class=\"styled\" name=\"third_answer\" value=\"1\" /> Bij de supermarkt inleveren." +
+                    "<br/>" +
+                    "<input type=\"radio\" class=\"styled\" name=\"third_answer\" value=\"2\" /> Bij de rest van het afval." +
+                    "<br/>" +
+                    "</form>" +
+                    "<br/>" +
+                    "<form class=\"answer\" id=\"question_four\">" +
+                    "Klimaatverandering is niet zo drastisch als men soms laat geloven." +
+                    "<br/>" +
+                    "<input type=\"radio\" class=\"styled\" name=\"fourth_answer\" value=\"1\" /> Mee oneens." +
+                    "<br/>" +
+                    "<input type=\"radio\" class=\"styled\" name=\"fourth_answer\" value=\"2\" /> Mee eens." +
+                    "<br/>" +
+                    "</form>" +
+                    "<br/>" +
+                    "<form class=\"answer\" id=\"question_five\">" +
+                    "Rij jij vaak met de auto, terwijl je ook met de fiets zou kunnen?" +
+                    "<br/>" +
+                    "<input type=\"radio\" class=\"styled\" name=\"fifth_answer\" value=\"1\" /> Nee, ik neem dan altijd wel de fiets." +
+                    "<br/>" +
+                    "<input type=\"radio\" class=\"styled\" name=\"fifth_answer\" value=\"2\" /> Ja, maakt mij niet uit." +
+                    "<br/>" +
+                    "</form>" +
+                    "<br/>" +
+                    "<form class=\"answer\" id=\"question_six\">" +
+                    "Vind je zeer milieubewuste mensen het goede voorbeeld geven?" +
+                    "<br/>" +
+                    "<input type=\"radio\" class=\"styled\" name=\"sixth_answer\" value=\"1\" /> Absoluut." +
+                    "<br/>" +
+                    "<input type=\"radio\" class=\"styled\" name=\"sixth_answer\" value=\"2\" /> Nee, ze zijn misleid." +
+                    "<br/>" +
+                    "<input type=\"radio\" class=\"styled\" name=\"sixth_answer\" value=\"3\" /> Erger nog, ze geven het slechte voorbeeld." +
+                    "<br/> <br/>" +
+                    "</form>"
+                );
+            });
+
+
+            $("#leesverder").click(function() {
+                // window.location.href = "vervolg.html";
+
+                var $first_question = parseInt($("input[name=first_answer]:checked").val());
+                $first_question = $first_question ? $first_question : 0;
+
+                var $second_question = parseInt($("input[name=second_answer]:checked").val());
+                $second_question = $second_question ? $second_question : 0;
+
+                var $third_question = parseInt($("input[name=third_answer]:checked").val());
+                $third_question = $third_question ? $third_question : 0;
+
+                var $fourth_question = parseInt($("input[name=fourth_answer]:checked").val());
+                $fourth_question = $fourth_question ? $fourth_question : 0;
+
+                var $fifth_question = parseInt($("input[name=fifth_answer]:checked").val());
+                $fifth_question = $fifth_question ? $fifth_question : 0;
+
+                var $sixth_question = parseInt($("input[name=sixth_answer]:checked").val());
+                $sixth_question = $sixth_question ? $sixth_question : 0;
+
+                var $total_score = $first_question + $second_question + $third_question + $fourth_question + $fifth_question + $sixth_question;
+
+
+                if ($first_question == 0 || $second_question == 0 || $third_question == 0 || $fourth_question == 0 || $fifth_question == 0 || $sixth_question == 0) {
+                    alert("Je moet alles invullen.");
+                }
+
+                if ($total_score == 6 || $total_score == 7 || $total_score == 8) {
+                    if ($first_question != 0 && $second_question != 0 && $third_question != 0 && $fourth_question != 0 && $fifth_question != 0 && $sixth_question != 0) {
+                        window.location.href = "milieubewust.html";
+                    }
+                } else if ($total_score == 9 || $total_score == 10 || $total_score == 11 || $total_score == 12) {
+                    if ($first_question != 0 && $second_question != 0 && $third_question != 0 && $fourth_question != 0 && $fifth_question != 0 && $sixth_question != 0) {
+                        window.location.href = "sceptisch.html";
+                    }
+                } else if ($total_score > 12 && $first_question != 0 && $second_question != 0) {
+                    if ($first_question != 0 && $second_question != 0 && $third_question != 0 && $fourth_question != 0 && $fifth_question != 0 && $sixth_question != 0) {
+                        window.location.href = "onverschillig.html";
+                    }
+                }
+
+            });
+
+            $(function() {
+                $('#showquiz').css({
+                    'position': 'absolute',
+                    'margin-left': function() {
+                        return -$(this).outerWidth() / 2
+                    }
+                });
+            });
+
+
+        $("#commknop").click(function() {
+            window.location.href = "community.html";
+        });
+        
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+            $("#menu-toggle-2").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled-2");
+                var icon = $(this).parent().find(".glyphicon")
+                if (icon.hasClass('glyphicon-chevron-right'))
+                    icon.removeClass('glyphicon-chevron-right').addClass("glyphicon-chevron-left");
+                else
+                    icon.removeClass('glyphicon-chevron-left').addClass("glyphicon-chevron-right");
+                $('#menu ul').hide();
+            });
+
+            function initMenu() {
+                // $('#menu ul').hide();
+                $('#menu ul').children('.current').parent().show();
+                $('#menu li a').click(
+                    function() {
+                        var checkElement = $(this).next();
+                        if ((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+                            return false;
+                        }
+                        if ((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+                            $('#menu ul:visible').slideUp('normal');
+                            checkElement.slideDown('normal');
+                            return false;
+                        }
+                    }
+                );
+            }
+            $(document).ready(function() {
+                initMenu();
+            });
+            </script>
+
+</body>
+
+</html>

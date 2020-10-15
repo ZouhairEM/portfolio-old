@@ -1,0 +1,90 @@
+import java.awt.Desktop;
+import java.io.*;
+import java.util.Scanner;
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import j.extensions.comm.*;
+import java.awt.*;
+ 
+public class Main {
+ 
+        public static void main(String[] args) {
+                JFrame window = new JFrame();
+                JPanel panel = new JPanel();
+                JButton button = new JButton();
+                JLabel label = new JLabel();
+                
+        window = new JFrame("DAF Bewegingssensor");
+        window.setVisible(true);
+        window.setSize(600, 400);
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setVisible(true);
+        label = new JLabel("Zoekend naar beweging...");
+        
+		try{
+			window.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("C:/Users/Z/Desktop/arduinoproject/342246_daf-lf-construction-truck-design-sketch.jpg")))));
+		}catch(Exception e)
+		{
+			System.out.println("Image doesn't exist");
+		}
+		
+        panel.add(label);
+        window.add(panel);
+		window.pack();
+		
+		SerialComm ports[] = SerialComm.getCommPorts();
+		System.out.println("Selecteer een comm port:");
+		int i = 1;
+		for(SerialComm port : ports){
+			System.out.println(i++ + ". " + port.getSystemPortName());
+		}
+		
+		Scanner s = new Scanner(System.in);
+		int chosenPort = s.nextInt();
+		
+		SerialComm port = ports[chosenPort - 1];
+		if(port.openPort()){
+			System.out.print("Serial comm port geopend");
+			try{Desktop.getDesktop().open(new File("C:/Users/Z/Desktop/arduinoproject/Moodvideo.bat"));}
+			catch (Exception e){}
+		}else{
+			System.out.print("Serial comm port niet geopend. Probeer opnieuw");
+			return;
+		}
+		
+		port.setComPortTimeouts(SerialComm.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
+		
+		Scanner data = new Scanner(port.getInputStream());
+		while(data.hasNextLine()){
+		    int num = data.nextInt();
+		    int num2 = data.nextInt();
+			System.out.print(System.lineSeparator() + num);
+			if(num < 46){
+				try {
+					Thread.sleep(3000);
+					System.out.print(System.lineSeparator() + num2);
+					if(num2 < 46){
+						try{Desktop.getDesktop().open(new File("C:/Users/Z/Desktop/arduinoproject/Interface.bat"));}
+						catch (Exception e){}
+						   break;							
+					}
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}	
+			}		
+		}
+	}
+}
+
+
+//de batch scripts:
+
+//Moodvideo.bat
+//@echo off
+//taskkill /im iexplore.exe /f
+//start iexplore -k https://www.youtube.com/tv#/watch?v=i9RNXcPaJow
+
+//Interface.bat
+//@echo off
+//taskkill /im iexplore.exe /f
+//start iexplore -k https://xd.adobe.com/view/0478cd0b-203e-4bc1-b061-66cc49bf141b/screen/ce130337-185b-4af9-a4c8-fa8e819e524b/Intro

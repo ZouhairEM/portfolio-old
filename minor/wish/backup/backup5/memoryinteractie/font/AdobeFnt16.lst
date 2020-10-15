@@ -1,0 +1,26 @@
+%!Adobe-FontList 1.16
+%Locale:0x413
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PeaceSans
+FamilyName:Peace Sans
+StyleName:Regular
+FullName:Peace Sans
+MenuName:Peace Sans
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\wamp\www\minor\wish\memoryinteractie\Font\peace_sans.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:118468
+FileModTime:1545105096
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Peace Sans
+NameArray:0,Win,1,Peace Sans
+%EndFont
+

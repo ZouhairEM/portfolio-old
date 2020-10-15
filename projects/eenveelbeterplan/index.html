@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Een veel beter plan
+    </title>
+    <link href="layout.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="logomedia.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,500,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <meta name="robots" content="noindex,follow" />
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-header fixed-brand">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" id="menu-toggle">
+                <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+            </button>
+            <a href="index.html"><img src="logomedia.png" alt="Icon" id="imgicon" height="30px" width="30px"></a>
+            <a class="navbar-brand" href="index.html">Een veel beter plan</a>
+        </div>
+    </nav>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <div class="scrollbar">
+                <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+                    <li>
+                        <a href="intro.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-info-circle fa-stack-1x "></i></span>Intro</a>
+                    </li>
+                    <li>
+                        <a href="quiz.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-check-circle-o fa-stack-1x "></i></span>Quiz</a>
+                    </li>
+                    <li>
+                        <a href="milieubewust.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-bookmark-o fa-stack-1x "></i></span>Milieubewust</a>
+                    </li>
+                    <li>
+                        <a href="sceptisch.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-bookmark-o fa-stack-1x "></i></span>Sceptisch</a>
+                    </li>
+                    <li>
+                        <a href="onverschillig.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-bookmark-o fa-stack-1x "></i></span>Onverschillig</a>
+                    </li>
+                    <li>
+                        <a href="community.html" id="commknop"><span class="fa-stack fa-lg pull-left"><i class="fa fa-comments-o fa-stack-1x "></i></span>Community</a>
+                        <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                            <li><a href="debat.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-comment-o fa-stack-1x ""></i></span>Debat</a></li>
+                            <li><a href="discussie.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-comment-o fa-stack-1x ""></i></span>Discussie</a></li>
+                            <li><a href="groei.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-comment-o fa-stack-1x ""></i></span>Groei</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    </div>
+                    <div id="menuutje"> <img src="logomediawhite.png" alt="Logo" id="logotree">
+                        <div id="intro">
+                            <i>
+                  <b>
+                     <p>"Een veel beter plan"
+                  </b>
+                 is een verhaal over het klimaat dat zich aan jou aanpast d.m.v. een quiz. Het verhaal kan divergeren tot drie totaal verschillende einden.
+                  <p>
+                     Je hebt de keuze om het verhaal online te lezen op deze website, of het te downloaden als Epub.
+                  <p>Als je het als Epub wilt lezen, is Calibre de aanbevolen reader.
+               </i>
+                        </div>
+                        <div id="buttons">
+                            <button id="btn1" class="btn">De website</button>
+                            <button id="btn2" class="btn">Epub</button>
+                            <button id="btn3" class="btn">Community</button>
+                        </div>
+                    </div>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+                    <script src="js/jquery-1.11.2.min.js"></script>
+                    <script src="js/bootstrap.min.js"></script>
+                    <script src="js/sidebar_menu.js"></script>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+        $("#btn1").click(function() {
+            window.location.href = "intro.html";
+        });
+
+        $("#btn3").click(function() {
+            window.location.href = "community.html";
+        });
+
+        $("#commknop").click(function() {
+            window.location.href = "community.html";
+        });
+
+        $("#btn2").click(function() {
+            window.location.href = "https://drive.google.com/uc?export=download&id=0B28uSltIxqmxN3VBMGZ5eGxzQVU";
+        });
+        $(function() {
+            $('#logotree').css({
+                'position': 'absolute',
+                'margin-top': '3%',
+                'margin-left': function() {
+                    return -$(this).outerWidth() / 2
+                }
+            });
+        });
+
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+        $("#menu-toggle-2").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled-2");
+            var icon = $(this).parent().find(".glyphicon")
+            if (icon.hasClass('glyphicon-chevron-right'))
+                icon.removeClass('glyphicon-chevron-right').addClass("glyphicon-chevron-left");
+            else
+                icon.removeClass('glyphicon-chevron-left').addClass("glyphicon-chevron-right");
+            $('#menu ul').show();
+        });
+
+        function initMenu() {
+            // $('#menu ul').show();
+            $('#menu ul').children('.current').parent().show();
+            $('#menu li a').click(
+                function() {
+                    var checkElement = $(this).next();
+                    if ((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+                        return false;
+                    }
+                    if ((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+                        $('#menu ul:visible').slideUp('normal');
+                        checkElement.slideDown('normal');
+                        return false;
+                    }
+                }
+            );
+        }
+        $(document).ready(function() {
+            initMenu();
+        });
+        </script>
+</body>
+
+</html>

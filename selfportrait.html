@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+	<title>Portfolio Zouhair | Design, Prototyping, Programming</title>
+	<link rel="icon" href="images/logo/favicon.png" type="image/png">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Hello, my name's Zouhair and welcome to my portfolio. I'm a Dutch IT and Media Designer, with a passion for design, prototyping and programming.">
+
+	<link rel="stylesheet" href="css/animate.min.css" type="text/css">
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+	<link rel="stylesheet" href="css/iframe.css" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--Fancy Box-->
+	<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+</head>
+
+<body>
+
+	<div class="container">
+	<header>
+		<!-- Logo -->
+		<a href="index.html">
+			<img class="logo" src="images/logo/logo.svg" alt="logo">
+		</a>
+
+		<!-- Navigation -->
+		<nav>
+			<ul>
+				<li><a href="index.html" id="active" class="animated flash">Projects</a></li>
+				<li><a href="bio/index.html">Bio</a></li>
+			</ul>
+		</nav>
+	</header>
+
+    <div id="iframePortrait">
+        	<div id="RectanglePortrait"></div>
+    </div>	
+
+	<main>
+
+		<div class="row">
+
+				<div class="col-sm-12 contentCover">
+        <a data-fancybox="gallery" href="images/content/digitaalzelfportret.png" data-caption="<b>Copyright: Zouhair El-Mariami</b>">
+					</a>
+					<div class="row contentRow">
+			      <div class="col-8 col-sm-6">
+							<h2>Self Portrait</h2>
+							<h3>Assignment</h3>
+							<p>For an assignment that was about capturing what makes me me, I wanted to create something that’s been <a href="http://www.mariami.nl/projects/zelfportret/index.html" target="_blank"><b>breathed life into</b></a>, while giving the viewer a look into its entire process.</p>
+<p>
+ I drew myself while animating it using plain Javascript.
+</p>
+<h3>
+	<a href="https://drive.google.com/file/d/0B28uSltIxqmxM09zR0FET01WcE0/view" target="_blank">Making Of</a>
+</h3>
+			      </div>
+			    </div>
+				</div>
+
+	  </div>
+
+	</main>
+
+	<!-- Footer -->
+	<footer w3-include-html="include/footer.html"></footer>
+
+	</div>
+
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/googleanalytics.min.js"></script>
+	<script src="js/include.js"></script>
+	<script src='https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js'></script>
+	<script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js'></script>
+	<script  src="js/masonry/index.js"></script>
+    <script type="text/javascript">
+		$("#RectanglePortrait").html('<object data="projects/zelfportret/index.html">');
+    </script>
+</body>
+
+</html>

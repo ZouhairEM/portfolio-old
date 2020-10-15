@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css.css" rel="stylesheet" type="text/css">
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+    </script>
+    <title></title>
+</head>
+<body>
+    <div id="entirediv">
+        <img id="backblue" src="backkopiethird.png">
+        <canvas height="864" id="my_canvas" width="500"></canvas>
+        <h1 id="status"></h1><img id="rain" src="rainds.png" style=
+        "display:none;"> <img id="image" src="">
+        <canvas height="364" id="my_canvas2" width="411"></canvas><img id=
+        "frontys" src="front.png"> 
+        <script>
+
+        var lastTick = 0;
+        var position = { x:0, y:0 };
+        var rain = document.getElementById('rain');
+        var canvas_container = document.getElementById('my_canvas2');
+        var ctx = canvas_container.getContext('2d');
+
+        function update(gameTime) {
+        position.x += (40 * gameTime.diff / 120);
+        position.y += (70 * gameTime.diff / 140);
+        if (position.x > canvas_container.width) {
+        position.x = 0;
+        }
+
+        if (position.y > canvas_container.height) {
+        position.y = 0;
+        }
+        }
+
+        function draw(gameTime) {
+        ctx.clearRect(0, 0, canvas_container.width, canvas_container.height);
+        ctx.drawImage(rain, position.x, position.y, canvas_container.width, canvas_container.height);
+        ctx.drawImage(rain, position.x - canvas_container.width, position.y, canvas_container.width, canvas_container.height);
+        ctx.drawImage(rain, position.x, position.y - canvas_container.height, canvas_container.width, canvas_container.height);
+        ctx.drawImage(rain, position.x - canvas_container.width, position.y - canvas_container.height, canvas_container.width, canvas_container.height);
+        }
+
+        function loop(tick) {
+        var diff = tick - lastTick;
+        var gameTime = { tick:tick, diff:diff };
+        update(gameTime);
+        draw(gameTime);
+        requestAnimationFrame(loop);
+        lastTick = tick;
+        }
+
+        requestAnimationFrame(loop);
+
+        var back = new Image();
+        back.src = "backkopiethird.png";
+
+        var front = new Image();
+        front.src = "frontkopie.png";
+
+        var frontplane = new Image();
+        frontplane.src = "front.png";
+
+        var bg = new Image();
+        bg.src = "backgroundloop.png";
+
+        var fg = new Image();
+        fg.src = "foregroundlooptwo.png";
+
+        function initCanvas(){
+        var lastTick = 0;
+        var position = { x:0, y:0 };
+        var rain = document.getElementById('rain');
+        var ctx = document.getElementById('my_canvas').getContext('2d');
+        var canvas_container = document.getElementById('my_canvas2');
+        var cW = ctx.canvas.width, cH = ctx.canvas.height;
+
+        function Background(){
+        this.x = 0, this.y = 0, this.w = bg.width, this.h = bg.height;
+        this.render = function(){
+
+            ctx.drawImage(bg, this.x--, 0);
+            if(this.x <= -1250){
+                this.x = 0;
+            }
+        }
+        }
+        var background = new Background();
+
+        var image1 = "frontkopie.png";
+        var image2 = "frontkopiehalfblink.png";
+        var image3 = "frontkopiefullblink.png";
+
+        var images = ["frontkopie.png",
+              "frontkopiehalfblink.png",
+              "frontkopiefullblink.png"],
+        imel = document.getElementById("image");
+        function displayImages(idx,fwd){
+        var ms = 0;
+        idx = idx || 0;
+        if (idx === 0) {
+        fwd = !fwd;     
+        ms = fwd ? 4000
+             : (idx = images.length - 2, 100);
+        } else ms = 65;
+        imel.src = images[idx];
+        fwd ? setTimeout(function(){displayImages(++idx % images.length,fwd)},ms)
+        : setTimeout(function(){displayImages(--idx,fwd)},ms);
+        }
+
+        displayImages();
+
+        function Foreground(){
+        this.x = 0, this.y = 0, this.w = fg.width, this.h = fg.height;
+        this.render = function(){
+
+            ctx.drawImage(fg, this.x--, 0);
+            if(this.x <= -499){
+                this.x = 0;
+            }
+        }
+        }
+        var foreground = new Foreground();
+
+        function animate(){
+        ctx.save();
+        ctx.clearRect(0, 0, cW, cH);
+		background.render(); 
+        ctx.restore();
+        }
+        var animateInterval = setInterval(animate, 30);
+        }
+        window.addEventListener('load', function(event) {
+        initCanvas();
+        });
+
+        </script>
+    </div>
+</body>
+</html>

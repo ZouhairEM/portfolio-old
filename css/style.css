@@ -1,0 +1,611 @@
+/* color: #982C55;
+ = purple color: #242222;
+ = black */
+ *{
+     box-sizing: border-box;
+}
+ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     font-size: 100%;
+     font: inherit;
+     vertical-align: baseline;
+}
+ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+     display: block;
+}
+ @font-face {
+     font-family: 'Nunito', sans-serif;
+}
+ html, body {
+     line-height: 1;
+     font-family: 'Nunito', sans-serif;
+     float: left;
+     width: 100%;
+     margin: 0;
+     padding: 0;
+     min-width: 340px;
+}
+ ol, ul {
+     list-style: none;
+}
+ blockquote, q {
+     quotes: none;
+}
+ blockquote:before, blockquote:after, q:before, q:after {
+     content: '';
+     content: none;
+}
+ table {
+     border-collapse: collapse;
+     border-spacing: 0;
+}
+ .wrapper {
+     min-height: calc(100vh - 50px);
+}
+ .container {
+     margin: 0 auto;
+     width: 100%;
+     height: 100%;
+     max-width: 1213px;
+}
+ .innerContainer {
+     padding: 0 30px;
+}
+ h1 {
+     letter-spacing: 0.5px;
+}
+ h2 {
+     font-size: 20px;
+     letter-spacing: 0.5px;
+}
+ a {
+     text-decoration: none;
+}
+i{
+      font-style: italic;
+      color: #242222;
+}
+b {
+    font-weight: bold;
+} 
+ .navPoints > ul > a > li::before {
+     content: "";
+     position: relative;
+     left: -10px;
+     background-color: #982C55;
+     opacity: 0.9;
+     display: inline-block;
+     width: 10px;
+     height: 11px;
+     border: 1px solid black;
+}
+ .nav li {
+     float: left;
+     width: 20%;
+     text-align: center;
+     font-size: 20px;
+     padding: 15px;
+     color: white;
+}
+ .logoContainer {
+     float: left;
+     width: 20%;
+}
+ .logo {
+     height: 30px;
+     width: 135px;
+     display: block;
+}
+ .contact {
+     height: 30px;
+     width: 30px;
+     display: inline;
+     margin: 0 2.5px;
+}
+ .topNavRight > a:nth-child(5) > img {
+     margin-right: 0px;
+}
+ footer {
+     background: #242222;
+     color: white;
+     height: 50px;
+     text-align: center;
+     line-height: 50px;
+}
+
+/********************************************** COURSES **********************************************/
+ .course {
+     float: left;
+     width: 50%;
+     background: #242222;
+     position: relative;
+     border: 1px solid #242222;
+}
+ .course:hover > .courseContent{
+     background: #242222;
+     transition: 0.5s;
+}
+ .courseTitle {
+     color: white;
+     text-align: center;
+     padding: 1%;
+}
+ .courseContent {
+     background: black;
+     height: 250px;
+     text-align: center;
+     margin: 0 auto;
+     display: block;
+     color: white;
+     font-size: 16px;
+}
+ .topNav{
+     margin: 12.5px 0;
+     float: left;
+     width: 100%;
+}
+ .topNavLeft{
+     float: left;
+     width: 50%;
+     text-align: left;
+     letter-spacing: 0.5px;
+}
+ .topNavRight{
+     float: left;
+     width: 50%;
+     text-align: right;
+}
+ .nav{
+     background: #242222;
+     float: left;
+     width: 100%;
+     margin: 25px 0;
+     transition: max-height 0.3s;
+     -webkit-transition: max-height 0.3s;
+}
+ .nav > ul > li > a{
+     height: 50px;
+     color: white;
+     line-height: 50px;
+     font-size: 18px;
+     cursor: pointer;
+     letter-spacing: 0.5px;
+}
+ .nav li:hover {
+     background: #982C55;
+     transition: 0.2s linear;
+}
+
+mark { 
+    background: #982C55;
+    line-height: 25px;
+    color: #FFF;
+    border-radius: 3px;
+    padding: 0 5px;
+}
+
+::selection {
+    background: #982C55;
+   color: #FFF;
+}
+::-moz-selection {
+  background: #982C55;
+   color: #FFF;
+}
+.indentClass{
+padding: 0 0 0 50px;
+}
+.indentBP{
+    display: list-item;                                               
+    list-style-type: disc;
+    list-style-position: inside;
+}
+.komtnog{
+    background: #ffee12;
+    color: black;
+    font-weight: bold;
+    float: left;
+}
+
+/********************************************** SECTION NAVIGATION **********************************************/
+ .secNav {
+     float: left;
+     width: 100%;
+     margin-bottom: 30px;
+}
+ .navTitle {
+     text-align: left;
+     font-size: 18px;
+     letter-spacing: 0.5px;
+}
+ .navPoints > ul > a > li{
+     text-align: left;
+     font-size: 16px;
+     letter-spacing: 0.5px;
+     text-decoration: inherit;
+     color: #242222;
+     width: 100%;
+     cursor: pointer;
+     margin: 5px 0px 0px 25px;
+}
+.workPostContent > ul > li{
+    margin: 5px 0px;
+    /* font-size: 14px; */
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}
+/********************************************** COURSES **********************************************/
+ .courses {
+     margin-bottom: 25px;
+     float: left;
+     width: 100%;
+}
+ .course {
+     float: left;
+     width: 49%;
+     margin: 10px 0;
+     position: relative;
+     cursor: pointer;
+     background: #242222;
+     border: 1px solid #242222;
+}
+ .courseTitle {
+     font-size: 18px;
+     letter-spacing: 0.5px;
+}
+ .courseContent {
+     background: #982C55;
+     height: 250px;
+     width: 100%;
+     text-align: center;
+     margin: 0 auto;
+     display: block;
+     float: left;
+     width: 100%;
+     color: white;
+     font-size: 16px;
+}
+ .courseContent p {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     padding: 1%;
+     font-size: 18px;
+     letter-spacing: 0.5px;
+}
+ .courseImg {
+     margin: 12% auto;
+     width: 240px;
+}
+ .courseLeft {
+     margin-right: 1%;
+}
+ .courseRight {
+     margin-left: 1%;
+}
+.proudRatings {
+    position: absolute;
+    right: 5%;
+}
+.proudRating {
+    float: right;
+    margin: 0 5px;
+}
+.fa-square{
+    color: white;
+}
+.rubrics {
+    float: left;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.rubric {
+    float: left;
+    width: 6%;
+    padding: 5px;
+    text-align: center;
+    background: #982c55;
+    color: white;
+    font-size: 16px;
+    margin: 0 10px 0 0;
+}
+.rubric.active{
+    background: #242222;
+    font-weight: bold;    
+}
+
+/********************************************** WORK POST **********************************************/
+ .workTitle {
+    float: left;
+    width: 100%;
+    position:  relative;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+    color: white;
+    background: #242222;
+    padding: 5px;
+    cursor: pointer;
+    margin: 0 0px 25px 0px;
+}
+.workTitle > span {
+    float: left;
+}
+
+.toggleWindow {
+    float: right;
+    border: none;
+    background: none;
+}
+
+.workTitle > div > i {
+    font-size: 25px;
+    right: 2%;
+    top: 0;
+    position:  absolute;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+ .workImages{
+    float: left;
+    width: 100%;
+    margin: 25px 0;
+}
+.workImageC.thumbs{
+        width: 21%;
+    margin: 0 8.2%;
+}
+.workImage {
+    float: left;
+    width: 100%;
+}
+.workImage.nielsen{
+        width: 70%;
+    margin: 0 15%;
+}
+ .workImageC{
+     float: left;
+     width: 32%;
+     position: relative;
+}
+.workImageC.three{
+    width: 32%;
+}  
+.workImageC.four{
+    width: 23%;
+}  
+ .workImageC:nth-child(even) {
+     margin: 0 2%;
+}
+
+ .learnedPost{
+     float: left;
+     width: 100%;
+     margin-bottom: 50px;
+}
+ .learnedTitle{
+     font-weight: bold;
+     font-size: 18px;
+     margin-top: 10px;
+     margin-bottom: 15px;
+}
+ .workImagePost{
+     width: 100%;
+     font-size: 14px;
+     background: #982C55;
+     position: absolute;
+     top: 0;
+     color: white;
+     padding: 5px;
+}
+ p {
+     width: 100%;
+     float: left;
+     letter-spacing: 0.5px;
+     line-height: 1.3;
+     margin-bottom: 15px;
+}
+ .workPostC{
+     margin: 25px 0;
+}
+.workPost:nth-child(1){
+     position: relative;
+}
+.test {
+    right: -5%;
+    top: 0;
+    width: 5%;
+    padding: 0 0px 9px 0px;
+    position: absolute;
+    color: white;
+    border: solid 1px black;
+    cursor: pointer;
+    line-height: 30px;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.test img {
+    height: 26px;
+    margin: 1px 0;
+}
+.workPost {
+    float: left;
+    width: 100%;
+}
+.workPostContent{
+    float: left;
+    width: 100%;   
+}
+ .workPostSubtitle{
+     float: left;
+     width: 100%;
+     font-size: 18px;
+     font-weight: bold;
+     margin: 15px 0 15px 0;
+}
+.open, .close{
+    font-size: 40px;
+     background:none; 
+    border:none;
+     outline:none; 
+    position:absolute;
+    top: 10px;
+    left: 25px;
+    color: white;
+    cursor:pointer;
+    display: none;
+}
+
+/********************************************** RESPONSIVE WEBDESIGN **********************************************/
+ @media screen and (max-width: 1100px){
+    .courseLeft {
+         width: 80%;
+         margin: 0 10%;
+    }
+    .courseRight {
+         width: 80%;
+         margin: 2% 10%;
+    }
+}
+ @media screen and (max-width: 1000px){
+    .courseLeft {
+         width: 100%;
+         /* height: 240px; */
+         margin: 10px 0;
+    }
+    .courseRight {
+         width: 100%;
+         margin: 10px 0;
+         /* height: 280px; */
+    }
+}
+ @media screen and (max-width: 900px){
+    .workImage{
+         width: 70%;
+         margin: 0px 15%;
+    }
+    .workImage:nth-child(2) {
+        margin: 2% 15%
+    }
+}
+ @media screen and (max-width: 800px){
+    .navPoints > ul > a > li::before {
+         margin: 0 0px 0 0;
+    }
+}
+ @media screen and (max-width: 700px){
+    .navPoints > ul > a > li::before {
+         display: none;
+    }
+    .topNavRight {
+        margin: 15px 0 -15px 0px;
+}
+    .nav li {
+         width: 100%;
+         padding: 7px;
+    }
+    .logo {
+         margin: 0 auto;
+         display: block;
+    }
+    .topNavLeft{
+         width: 100%;
+    }
+    .topNavRight{
+         width: 100%;
+         margin: 15px 0 -15px 0px;
+         text-align: center;
+    }
+    .secNav {
+         text-align: center;
+    }
+    .navTitle {
+         text-align: center;
+         margin: 0px 0px 5px 0px;
+         font-weight: bold;
+         font-size: 16px;
+    }
+    .navPoints > ul > a > li{
+         text-align: center;
+         margin: 0;
+         font-size: 16px;
+    }
+    .workImage{
+         width: 100%;
+         margin: 0;
+    }
+    .workImage:nth-child(2) {
+        margin: 2% 0;
+    }
+    .open, .close{
+        display: block;
+    }
+    .topNavRight.active{
+        margin-bottom: 0px;
+        transition: margin 0.3s;
+
+    }
+    .topNavRight {
+        transition: margin 0.3s;
+        margin-bottom: -45px;
+    }
+    .nav{
+        max-height: 0;
+        overflow: hidden;
+    }
+    .nav.active{
+        display: block;
+        max-height: 200px;
+    }
+}
+ @media screen and (max-width: 600px){
+    .navPoints > ul > a > li::before {
+         display: none;
+    }
+    .navPoints > ul > a > li{
+         text-align: center;
+         margin: 10px 0;
+    }
+    .courseImg {
+         width: 130px;
+    }
+    .learnedTitle{
+         text-align: center;
+    }
+    .workPostSubtitle{
+         text-align: center;
+    }
+    .courses {
+        
+    }
+    .course{
+        margin: 20px 0;
+    }
+}
+ @media screen and (max-width: 500px){
+    .courseContent {
+         height: 220px;
+    }
+    .courseContent p {
+         display: none;
+    }
+    .courseImg {
+         width: 120px;
+    }
+    .courseRight{
+        height: 100%;
+    }
+
+}
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Imgur-Upload</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+    <div class="title">
+        <h1>Imgur Upload API</h1>
+    </div>
+    <div class="dropzone">
+        <div class="info"></div>
+    </div>
+
+    <script type="text/javascript" src="imgur.js">
+    </script>
+    <script type="text/javascript">
+        var feedback = function(res) {
+    if (res.success === true) {
+        var get_link = res.data.link.replace(/^http:\/\//i, 'https://');
+        document.querySelector('.status').classList.add('bg-success');
+        document.querySelector('.status').innerHTML = 'Image : ' + '<br><input class="image-url" value=\"' + get_link + '\"/>' 
+
+//        + '<img class="img" alt="Imgur-Upload" src=\"' + get_link + '\"/>';
+   }   
+};
+
+new Imgur({
+    clientid: 'a78e02874d409ee',
+    callback: feedback
+});
+    </script>
+</body>
+
+</html>
